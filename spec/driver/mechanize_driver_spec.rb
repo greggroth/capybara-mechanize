@@ -177,12 +177,6 @@ describe Capybara::Mechanize::Driver, 'local' do
     after do
       Capybara.default_host = nil
     end
-
-    it "should raise a useful error for sites that return a 404, because it is probably a misconfiguration" do
-      expect { 
-        driver.visit("http://iamreallysurethatthisdoesntexist.com/canttouchthis")
-      }.to raise_error(%r{Received the following error for a GET request to http://iamreallysurethatthisdoesntexist.com/canttouchthis:})
-    end
   end
 
   it "should include the right host when remote" do

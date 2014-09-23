@@ -4,13 +4,15 @@ module TestSessions
   Mechanize = Capybara::Session.new(:mechanize, TestApp)
 end
 
-Capybara::SpecHelper.run_specs TestSessions::Mechanize, "Mechanize", :skip => [
+Capybara::SpecHelper.run_specs TestSessions::Mechanize, "Mechanize", :capybara_skip => [
   :js,
+  :modals,
   :screenshot,
   :frames,
   :windows,
   :server,
-  :hover
+  :hover,
+  :about_scheme,
 ]
 
 describe Capybara::Session do

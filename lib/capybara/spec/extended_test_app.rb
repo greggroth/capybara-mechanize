@@ -68,6 +68,10 @@ class ExtendedTestApp < TestApp#< Sinatra::Base
     request.referer.nil? ? "No referer" : "Got referer: #{request.referer}"
   end
 
+  get '/foo/bar' do
+    'Hello world!'
+  end
+
   private
 
     def current_request_info

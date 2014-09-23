@@ -18,11 +18,14 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
 
   s.add_runtime_dependency(%q<mechanize>, ["~> 2.7"])
-  s.add_runtime_dependency(%q<capybara>, ["~> 2.1.0"])
+  s.add_runtime_dependency(%q<capybara>, ["~> 2.4.0"])
+  s.add_runtime_dependency(%q<launchy>, ["~> 2.4.0"])
 
-  s.add_development_dependency('rspec', '~> 2.12.0')
+  s.add_development_dependency('rspec', '~> 2.2.0')
+  s.add_development_dependency('rspec-collection_matchers', '~> 1.0.0')
   s.add_development_dependency('sinatra', '~> 1.3.3')
   s.add_development_dependency('rake', '~> 10.0.3')
   s.add_development_dependency('rdoc')
+  s.add_development_dependency('pry')
 end
 
